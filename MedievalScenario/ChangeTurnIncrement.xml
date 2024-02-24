@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
+<!-- Created by ModBuddy on 1/20/2011 9:24:48 AM -->
+<GameData>
+	<!-- TODO: Insert table creation example here. -->
+	<!-- TODO: Insert table data example here.-->
+	<!-- Enter your Game Data here. -->
+	<GameSpeeds>
+		<Update>
+			<Where Type="GAMESPEED_QUICK"/>
+			<Set>
+				<ResearchPercent>150</ResearchPercent>
+			</Set>
+		</Update>
+	</GameSpeeds>
+	<!--  70 six-month turns -->
+	<GameSpeed_Turns>
+		<Delete GameSpeedType="GAMESPEED_QUICK"/>
+	</GameSpeed_Turns>
+	<GameSpeed_Turns>
+		<Row>
+			<GameSpeedType>GAMESPEED_QUICK</GameSpeedType>
+			<MonthIncrement>36</MonthIncrement>
+			<TurnsPerIncrement>100</TurnsPerIncrement>
+		</Row>
+		<Row>
+			<GameSpeedType>GAMESPEED_QUICK</GameSpeedType>
+			<MonthIncrement>24</MonthIncrement>
+			<TurnsPerIncrement>200</TurnsPerIncrement>
+		</Row>
+	</GameSpeed_Turns>
+	<Defines>
+		<Update>
+			<Where Name="UNIT_MAINTENANCE_GAME_MULTIPLIER"/>
+			<Set>
+				<Value>0</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="UNIT_MAINTENANCE_GAME_EXPONENT_DIVISOR"/>
+			<Set>
+				<Value>1000</Value>
+			</Set>
+		</Update>
+	</Defines>
+</GameData>

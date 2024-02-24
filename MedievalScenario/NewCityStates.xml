@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
+<!-- Created by ModBuddy on 1/20/2011 10:36:21 AM -->
+<GameData>
+	<MinorCivilizations>
+		<Delete Type="MINOR_CIV_SYDNEY"/>
+		<Delete Type="MINOR_CIV_QUEBEC_CITY"/>
+		<Delete Type="MINOR_CIV_BUCHAREST"/>
+		<Delete Type="MINOR_CIV_BRUSSELS"/>
+		<Delete Type="MINOR_CIV_MONACO"/>
+		<Delete Type="MINOR_CIV_KATHMANDU"/>
+		<Delete Type="MINOR_CIV_HANOI"/>
+		<Delete Type="MINOR_CIV_LHASA"/>
+		<Delete Type="MINOR_CIV_ALMATY"/>
+		<Delete Type="MINOR_CIV_KUALA_LUMPUR"/>
+		<Delete Type="MINOR_CIV_SINGAPORE"/>
+		<Delete Type="MINOR_CIV_RIO_DE_JANEIRO"/>
+		<Delete Type="MINOR_CAPE_TOWN"/>
+		<Delete Type="MINOR_SIDON"/>
+		<Delete Type="MINOR_TYRE"/>
+		<Delete Type="MINOR_CIV_CAHOKIA"/>
+		<Delete Type="MINOR_CIV_COLOMBO"/>
+		<Delete Type="MINOR_CIV_HONG_KONG"/>
+		<Delete Type="MINOR_CIV_JAKARTA"/>
+		<Delete Type="MINOR_CIV_LA_VENTA"/>
+		<Delete Type="MINOR_CIV_MANILA"/>
+		<Delete Type="MINOR_CIV_MOMBASA"/>
+		<Delete Type="MINOR_CIV_YEREVAN"/>
+		<Delete Type="MINOR_CIV_ZANZIBAR"/>
+		<Delete Type="MINOR_CIV_MARRAKECH"/>
+		<Row>
+			<Type>MINOR_CIV_MECCA</Type>
+			<Description>TXT_KEY_CITYSTATE_MECCA</Description>
+			<ShortDescription>TXT_KEY_CITYSTATE_MECCA</ShortDescription>
+			<Adjective>TXT_KEY_CITYSTATE_MECCA_ADJ</Adjective>
+			<Civilopedia>TXT_KEY_MEDIEVAL_SCENARIO_CITYSTATE_MECCA_DESC</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_MINOR_WHITE</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_MINOR</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
+			<ArtStyleSuffix>_AFRI</ArtStyleSuffix>
+			<ArtStylePrefix>AFRICAN</ArtStylePrefix>
+			<MinorCivTrait>MINOR_TRAIT_RELIGIOUS</MinorCivTrait>
+		</Row>
+		<Row>
+			<Type>MINOR_CIV_TUNIS</Type>
+			<Description>TXT_KEY_CITYSTATE_TUNIS</Description>
+			<ShortDescription>TXT_KEY_CITYSTATE_TUNIS</ShortDescription>
+			<Adjective>TXT_KEY_CITYSTATE_TUNIS_ADJ</Adjective>
+			<Civilopedia>TXT_KEY_MEDIEVAL_SCENARIO_CITYSTATE_TUNIS_DESC</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_MINOR_LIGHT_GREEN</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_MINOR</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_MIDDLE_EAST</ArtStyleType>
+			<ArtStyleSuffix>_AFRI</ArtStyleSuffix>
+			<ArtStylePrefix>AFRICAN</ArtStylePrefix>
+			<MinorCivTrait>MINOR_TRAIT_MILITARISTIC</MinorCivTrait>
+		</Row>
+		<Row>
+			<Type>MINOR_CIV_COLOGNE</Type>
+			<Description>TXT_KEY_CITYSTATE_COLOGNE</Description>
+			<ShortDescription>TXT_KEY_CITYSTATE_COLOGNE</ShortDescription>
+			<Adjective>TXT_KEY_CITYSTATE_COLOGNE_ADJ</Adjective>
+			<Civilopedia>TXT_KEY_MEDIEVAL_SCENARIO_CITYSTATE_COLOGNE_DESC</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_MINOR_YELLOW</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_MINOR</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<ArtStyleSuffix>_EURO</ArtStyleSuffix>
+			<ArtStylePrefix>EUROPEAN</ArtStylePrefix>
+			<MinorCivTrait>MINOR_TRAIT_RELIGIOUS</MinorCivTrait>
+		</Row>
+		<Row>
+			<Type>MINOR_CIV_AUGSBURG</Type>
+			<Description>TXT_KEY_CITYSTATE_AUGSBURG</Description>
+			<ShortDescription>TXT_KEY_CITYSTATE_AUGSBURG</ShortDescription>
+			<Adjective>TXT_KEY_CITYSTATE_AUGSBURG_ADJ</Adjective>
+			<Civilopedia>TXT_KEY_MEDIEVAL_SCENARIO_CITYSTATE_AUGSBURG_DESC</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_MINOR_LIGHT_ORANGE</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_MINOR</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<ArtStyleSuffix>_EURO</ArtStyleSuffix>
+			<ArtStylePrefix>EUROPEAN</ArtStylePrefix>
+			<MinorCivTrait>MINOR_TRAIT_MERCANTILE</MinorCivTrait>
+		</Row>
+		<Row>
+			<Type>MINOR_CIV_NAPLES</Type>
+			<Description>TXT_KEY_CITYSTATE_NAPLES</Description>
+			<ShortDescription>TXT_KEY_CITYSTATE_NAPLES</ShortDescription>
+			<Adjective>TXT_KEY_CITYSTATE_NAPLES_ADJ</Adjective>
+			<Civilopedia>TXT_KEY_MEDIEVAL_SCENARIO_CITYSTATE_NAPLES_DESC</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_MINOR_LIGHT_BLUE</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_MINOR</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<ArtStyleSuffix>_EURO</ArtStyleSuffix>
+			<ArtStylePrefix>EUROPEAN</ArtStylePrefix>
+			<MinorCivTrait>MINOR_TRAIT_MARITIME</MinorCivTrait>
+		</Row>
+		<Row>
+			<Type>MINOR_CIV_RIGA</Type>
+			<Description>TXT_KEY_CITYSTATE_RIGA</Description>
+			<ShortDescription>TXT_KEY_CITYSTATE_RIGA</ShortDescription>
+			<Adjective>TXT_KEY_CITYSTATE_RIGA_ADJ</Adjective>
+			<Civilopedia>TXT_KEY_MEDIEVAL_SCENARIO_CITYSTATE_RIGA_DESC</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_MINOR_LIGHT_GREEN</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_MINOR</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<ArtStyleSuffix>_EURO</ArtStyleSuffix>
+			<ArtStylePrefix>EUROPEAN</ArtStylePrefix>
+			<MinorCivTrait>MINOR_TRAIT_MARITIME</MinorCivTrait>
+		</Row>
+		<Row>
+			<Type>MINOR_CIV_GDANSK</Type>
+			<Description>TXT_KEY_CITYSTATE_GDANSK</Description>
+			<ShortDescription>TXT_KEY_CITYSTATE_GDANSK</ShortDescription>
+			<Adjective>TXT_KEY_CITYSTATE_GDANSK_ADJ</Adjective>
+			<Civilopedia>TXT_KEY_MEDIEVAL_SCENARIO_CITYSTATE_GDANSK_DESC</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_MINOR_LIGHT_ORANGE</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_MINOR</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<ArtStyleSuffix>_EURO</ArtStyleSuffix>
+			<ArtStylePrefix>EUROPEAN</ArtStylePrefix>
+			<MinorCivTrait>MINOR_TRAIT_MERCANTILE</MinorCivTrait>
+		</Row>
+		<Row>
+			<Type>MINOR_CIV_POLOTSK</Type>
+			<Description>TXT_KEY_CITYSTATE_POLOTSK</Description>
+			<ShortDescription>TXT_KEY_CITYSTATE_POLOTSK</ShortDescription>
+			<Adjective>TXT_KEY_CITYSTATE_POLOTSK_ADJ</Adjective>
+			<Civilopedia>TXT_KEY_MEDIEVAL_SCENARIO_CITYSTATE_POLOTSK_DESC</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_MINOR_LIGHT_BLUE</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_MINOR</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<ArtStyleSuffix>_EURO</ArtStyleSuffix>
+			<ArtStylePrefix>EUROPEAN</ArtStylePrefix>
+			<MinorCivTrait>MINOR_TRAIT_MILITARISTIC</MinorCivTrait>
+		</Row>
+	</MinorCivilizations>
+	<MinorCivilization_CityNames>
+		<Delete MinorCivType="MINOR_CIV_SYDNEY"/>
+		<Delete MinorCivType="MINOR_CIV_QUEBEC_CITY"/>
+		<Delete MinorCivType="MINOR_CIV_BUCHAREST"/>
+		<Delete MinorCivType="MINOR_CIV_BRUSSELS"/>
+		<Delete MinorCivType="MINOR_CIV_MONACO"/>
+		<Delete MinorCivType="MINOR_CIV_KATHMANDU"/>
+		<Delete MinorCivType="MINOR_CIV_HANOI"/>
+		<Delete MinorCivType="MINOR_CIV_LHASA"/>
+		<Delete MinorCivType="MINOR_CIV_ALMATY"/>
+		<Delete MinorCivType="MINOR_CIV_KUALA_LUMPUR"/>
+		<Delete MinorCivType="MINOR_CIV_SINGAPORE"/>
+		<Delete MinorCivType="MINOR_CIV_RIO_DE_JANEIRO"/>
+		<Delete MinorCivType="MINOR_CAPE_TOWN"/>
+		<Delete MinorCivType="MINOR_SIDON"/>
+		<Delete MinorCivType="MINOR_TYRE"/>
+		<Delete MinorCivType="MINOR_CIV_CAHOKIA"/>
+		<Delete MinorCivType="MINOR_CIV_COLOMBO"/>
+		<Delete MinorCivType="MINOR_CIV_HONG_KONG"/>
+		<Delete MinorCivType="MINOR_CIV_JAKARTA"/>
+		<Delete MinorCivType="MINOR_CIV_LA_VENTA"/>
+		<Delete MinorCivType="MINOR_CIV_MANILA"/>
+		<Delete MinorCivType="MINOR_CIV_MOMBASA"/>
+		<Delete MinorCivType="MINOR_CIV_YEREVAN"/>
+		<Delete MinorCivType="MINOR_CIV_ZANZIBAR"/>
+		<Delete MinorCivType="MINOR_CIV_MARRAKECH"/>
+		<Row>
+			<MinorCivType>MINOR_CIV_MECCA</MinorCivType>
+			<CityName>TXT_KEY_CITYSTATE_MECCA</CityName>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_TUNIS</MinorCivType>
+			<CityName>TXT_KEY_CITYSTATE_TUNIS</CityName>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_COLOGNE</MinorCivType>
+			<CityName>TXT_KEY_CITYSTATE_COLOGNE</CityName>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_AUGSBURG</MinorCivType>
+			<CityName>TXT_KEY_CITYSTATE_AUGSBURG</CityName>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_NAPLES</MinorCivType>
+			<CityName>TXT_KEY_CITYSTATE_NAPLES</CityName>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_RIGA</MinorCivType>
+			<CityName>TXT_KEY_CITYSTATE_RIGA</CityName>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_GDANSK</MinorCivType>
+			<CityName>TXT_KEY_CITYSTATE_GDANSK</CityName>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_POLOTSK</MinorCivType>
+			<CityName>TXT_KEY_CITYSTATE_POLOTSK</CityName>
+		</Row>
+	</MinorCivilization_CityNames>
+	<MinorCivilization_Flavors>
+		<Delete MinorCivType="MINOR_CIV_SYDNEY"/>
+		<Delete MinorCivType="MINOR_CIV_QUEBEC_CITY"/>
+		<Delete MinorCivType="MINOR_CIV_BUCHAREST"/>
+		<Delete MinorCivType="MINOR_CIV_BRUSSELS"/>
+		<Delete MinorCivType="MINOR_CIV_MONACO"/>
+		<Delete MinorCivType="MINOR_CIV_KATHMANDU"/>
+		<Delete MinorCivType="MINOR_CIV_HANOI"/>
+		<Delete MinorCivType="MINOR_CIV_LHASA"/>
+		<Delete MinorCivType="MINOR_CIV_ALMATY"/>
+		<Delete MinorCivType="MINOR_CIV_KUALA_LUMPUR"/>
+		<Delete MinorCivType="MINOR_CIV_SINGAPORE"/>
+		<Delete MinorCivType="MINOR_CIV_RIO_DE_JANEIRO"/>
+		<Delete MinorCivType="MINOR_CAPE_TOWN"/>
+		<Delete MinorCivType="MINOR_SIDON"/>
+		<Delete MinorCivType="MINOR_TYRE"/>
+		<Delete MinorCivType="MINOR_CIV_CAHOKIA"/>
+		<Delete MinorCivType="MINOR_CIV_COLOMBO"/>
+		<Delete MinorCivType="MINOR_CIV_HONG_KONG"/>
+		<Delete MinorCivType="MINOR_CIV_JAKARTA"/>
+		<Delete MinorCivType="MINOR_CIV_LA_VENTA"/>
+		<Delete MinorCivType="MINOR_CIV_MANILA"/>
+		<Delete MinorCivType="MINOR_CIV_MOMBASA"/>
+		<Delete MinorCivType="MINOR_CIV_YEREVAN"/>
+		<Delete MinorCivType="MINOR_CIV_ZANZIBAR"/>
+		<Delete MinorCivType="MINOR_CIV_MARRAKECH"/>
+		<Row>
+			<MinorCivType>MINOR_CIV_MECCA</MinorCivType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>0</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_MECCA</MinorCivType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_MECCA</MinorCivType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_MECCA</MinorCivType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>0</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_MECCA</MinorCivType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_TUNIS</MinorCivType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>0</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_TUNIS</MinorCivType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_TUNIS</MinorCivType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_TUNIS</MinorCivType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>0</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_TUNIS</MinorCivType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_COLOGNE</MinorCivType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>0</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_COLOGNE</MinorCivType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_COLOGNE</MinorCivType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_COLOGNE</MinorCivType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>0</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_COLOGNE</MinorCivType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_AUGSBURG</MinorCivType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>0</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_AUGSBURG</MinorCivType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_AUGSBURG</MinorCivType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_AUGSBURG</MinorCivType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>0</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_AUGSBURG</MinorCivType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_NAPLES</MinorCivType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>0</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_NAPLES</MinorCivType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_NAPLES</MinorCivType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_NAPLES</MinorCivType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>0</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_NAPLES</MinorCivType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_RIGA</MinorCivType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>0</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_RIGA</MinorCivType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_RIGA</MinorCivType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_RIGA</MinorCivType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>0</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_RIGA</MinorCivType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_GDANSK</MinorCivType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>0</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_GDANSK</MinorCivType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_GDANSK</MinorCivType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_GDANSK</MinorCivType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>0</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_GDANSK</MinorCivType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_POLOTSK</MinorCivType>
+			<FlavorType>FLAVOR_EXPANSION</FlavorType>
+			<Flavor>0</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_POLOTSK</MinorCivType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>10</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_POLOTSK</MinorCivType>
+			<FlavorType>FLAVOR_DEFENSE</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_POLOTSK</MinorCivType>
+			<FlavorType>FLAVOR_WONDER</FlavorType>
+			<Flavor>0</Flavor>
+		</Row>
+		<Row>
+			<MinorCivType>MINOR_CIV_POLOTSK</MinorCivType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>8</Flavor>
+		</Row>
+	</MinorCivilization_Flavors>
+</GameData>

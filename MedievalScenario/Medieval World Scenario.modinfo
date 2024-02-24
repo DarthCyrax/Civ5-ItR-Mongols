@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="8f9d820d-e336-4208-891d-50fdd968cc40" version="1">
+  <Properties>
+    <Name>Into the Renaissance Scenario</Name>
+    <Stability>Alpha</Stability>
+    <Teaser>Will you be able to preserve civilization as we know it and lead the world into the glory of the Renaissance?</Teaser>
+    <Description>Medieval scenario for expansion 1</Description>
+    <Authors>Ed Beach</Authors>
+    <HideSetupGame>1</HideSetupGame>
+    <AffectsSavedGames>1</AffectsSavedGames>
+    <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
+    <SupportsSinglePlayer>1</SupportsSinglePlayer>
+    <SupportsMultiplayer>1</SupportsMultiplayer>
+    <SupportsHotSeat>0</SupportsHotSeat>
+    <SupportsLeaderboards>1</SupportsLeaderboards>
+    <SupportsMac>1</SupportsMac>
+    <ReloadLandmarkSystem>0</ReloadLandmarkSystem>
+    <ReloadStrategicViewSystem>0</ReloadStrategicViewSystem>
+    <ReloadUnitSystem>0</ReloadUnitSystem>
+    <FiraxisScenario>1</FiraxisScenario>
+    <Custom_Background_TXT_KEY_MEDIEVAL_SCENARIO_TITLE>Scenario_IntoTheRenaissance_Small.dds</Custom_Background_TXT_KEY_MEDIEVAL_SCENARIO_TITLE>
+  </Properties>
+  <Dependencies>
+    <Dlc id="8871E748-29A4-4910-8C57-8C99E32D0167" minversion="0" maxversion="9999"/>
+    <Dlc id="0E3751A1-F840-4e1b-9706-519BF484E59D" minversion="0" maxversion="9999"/>
+    <Dlc id="293C1EE3-1176-44f6-AC1F-59663826DE74" minversion="0" maxversion="9999" />	
+ </Dependencies>
+  <References/>
+  <Blocks>
+    <Dlc id="*" minversion="0" maxversion="9999"/>
+  </Blocks>
+  <Files>
+    <File md5="EDCA0A6C502522B663A0B8EFF7D51BE4" import="0">ChangeTurnIncrement.xml</File>
+    <File md5="61DE2BBD031AFE8A9D1724AD3B5FCCA3" import="0">Europe_Scenario.lua</File>
+    <File md5="A83A07428B7153BF57F1FABDFE4AE155" import="0">MedievalScenarioLoadScreen.lua</File>
+    <File md5="0C048F336A5E9C52298EB06682F20A1E" import="0">MedievalScenarioLoadScreen.xml</File>
+    <File md5="AF9CDE3E0E582C0776056F46E64F8CFA" import="0">MedievalWorld.Civ5Map</File>
+    <File md5="5EE144BE4061AE8622E06B7C81E17901" import="0">NewCityStates.xml</File>
+    <File md5="3BF0E24051B2476256031876DCC73105" import="0">NewCivilizations.xml</File>
+    <File md5="C08EBEDF1E95A488D605E7A48CEB5631" import="1">ReligionOverview.lua</File>
+    <File md5="BF69997CA35242DF6F98F769A6123613" import="0">RemoveModernEras.xml</File>
+    <File md5="2D678E54E6781A0D4C49C32AD41115CA" import="0">ScenarioText.sql</File>
+    <File md5="CBFDD3E3017781EDD0B30C9828B35ACF" import="0">TechTreeUpdate.xml</File>
+    <File md5="B6562505F417249CE28C39C4F1FBDC4B" import="0">TurnsRemaining.lua</File>
+    <File md5="6101BC03340C48BB237C2579016B6CC7" import="0">TurnsRemaining.xml</File>
+    <File md5="BD54AFF2E10402EEA80709C1F983AD3C" import="1">VictoryProgress.lua</File>
+    <File md5="31C8BB0B65C5B345F39857AF71C13951" import="1">VictoryProgress.xml</File>
+    <File md5="5F7CEF5658C05D25E46EBF155236A98D" import="1">VoteResultsPopup.lua</File>
+	<File md5="5F7CEF5658C05D25E46EBF155236A98D" import="1">DiploVotePopup.lua</File>
+  </Files>
+  <Actions>
+    <OnModActivated>
+      <UpdateDatabase>RemoveModernEras.xml</UpdateDatabase>
+      <UpdateDatabase>NewCivilizations.xml</UpdateDatabase>
+      <UpdateDatabase>NewCityStates.xml</UpdateDatabase>
+      <UpdateDatabase>TechTreeUpdate.xml</UpdateDatabase>
+      <UpdateDatabase>ChangeTurnIncrement.xml</UpdateDatabase>
+      <UpdateDatabase>ScenarioText.sql</UpdateDatabase>
+    </OnModActivated>
+  </Actions>
+  <EntryPoints>
+    <EntryPoint type="InGameUIAddin" file="TurnsRemaining.xml">
+      <Name>Turns Remaining</Name>
+      <Description>Turns remaining counter</Description>
+    </EntryPoint>
+    <EntryPoint type="Custom" file="MedievalScenarioLoadScreen.xml">
+      <Name>TXT_KEY_MEDIEVAL_SCENARIO_TITLE</Name>
+      <Description>TXT_KEY_MEDIEVAL_SCENARIO_DESC</Description>
+    </EntryPoint>
+  </EntryPoints>
+</Mod>

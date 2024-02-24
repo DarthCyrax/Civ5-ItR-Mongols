@@ -1,0 +1,1055 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
+<!-- Created by ModBuddy on 12/15/2011 4:54:29 PM -->
+<GameData>
+	<!-- Enter your Game Data here. -->
+	<Defines>
+		<Update>
+			<Where Name="UNITED_NATIONS_COUNTDOWN_TURNS"/>
+			<Set>
+				<Value>25</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="OWN_UNITED_NATIONS_VOTE_BONUS"/>
+			<Set>
+				<Value>0</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="EMBARKED_UNIT_MOVEMENT"/>
+			<Set>
+				<Value>4</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="MINOR_CIV_BUYOUT_COST"/>
+			<Set>
+				<Value>750</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="MINOR_CIV_GLOBAL_QUEST_FIRST_POSSIBLE_TURN"/>
+			<Set>
+				<Value>5</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="MINOR_CIV_GLOBAL_QUEST_FIRST_POSSIBLE_TURN_RAND"/>
+			<Set>
+				<Value>20</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="MINOR_CIV_PERSONAL_QUEST_FIRST_POSSIBLE_TURN"/>
+			<Set>
+				<Value>2</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="MINOR_CIV_PERSONAL_QUEST_FIRST_POSSIBLE_TURN_RAND"/>
+			<Set>
+				<Value>10</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="MINOR_CIV_GLOBAL_QUEST_MIN_TURNS_BETWEEN"/>
+			<Set>
+				<Value>20</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="MINOR_CIV_GLOBAL_QUEST_RAND_TURNS_BETWEEN"/>
+			<Set>
+				<Value>15</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="MINOR_CIV_PERSONAL_QUEST_MIN_TURNS_BETWEEN"/>
+			<Set>
+				<Value>15</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="MINOR_CIV_PERSONAL_QUEST_RAND_TURNS_BETWEEN"/>
+			<Set>
+				<Value>10</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="MINOR_CIV_FRIENDSHIP_CONTEST_FAITH"/>
+			<Set>
+				<Value>60</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="MINOR_CIV_FRIENDSHIP_CONTEST_CULTURE"/>
+			<Set>
+				<Value>50</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="MINOR_CIV_FRIENDSHIP_SPREAD_RELIGION"/>
+			<Set>
+				<Value>60</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="MINOR_CIV_FRIENDSHIP_ROUTE"/>
+			<Set>
+				<Value>40</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="MINOR_CIV_FRIENDSHIP_KILL_CAMP"/>
+			<Set>
+				<Value>40</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="MINOR_CIV_FRIENDSHIP_CONNECT_RESOURCE"/>
+			<Set>
+				<Value>30</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="MINOR_CIV_FRIENDSHIP_FIND_PLAYER"/>
+			<Set>
+				<Value>25</Value>
+			</Set>
+		</Update>
+		<Update>
+			<Where Name="MINOR_CIV_FRIENDSHIP_FIND_NATURAL_WONDER"/>
+			<Set>
+				<Value>30</Value>
+			</Set>
+		</Update>
+	</Defines>
+	<Worlds>
+		<Update>
+			<Where Type="WORLDSIZE_SMALL"/>
+			<Set>
+				<MaxActiveReligions>3</MaxActiveReligions>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="WORLDSIZE_STANDARD"/>
+			<Set>
+				<MaxActiveReligions>3</MaxActiveReligions>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="WORLDSIZE_LARGE"/>
+			<Set>
+				<MaxActiveReligions>3</MaxActiveReligions>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="WORLDSIZE_HUGE"/>
+			<Set>
+				<MaxActiveReligions>3</MaxActiveReligions>
+			</Set>
+		</Update>
+	</Worlds>
+	<Eras>
+		<Update>
+			<Where Type="ERA_MEDIEVAL"/>
+			<Set>
+				<StartingUnitMultiplier>1</StartingUnitMultiplier>
+				<StartingDefenseUnits>1</StartingDefenseUnits>
+				<StartingWorkerUnits>1</StartingWorkerUnits>
+				<StartingExploreUnits>0</StartingExploreUnits>
+				<StartPercent>0</StartPercent>
+				<FreePopulation>2</FreePopulation>
+				<ResearchPercent>65</ResearchPercent>
+				<CreatePercent>100</CreatePercent>
+				<TrainPercent>100</TrainPercent>
+				<ConstructPercent>100</ConstructPercent>
+				<StartingCulture>125</StartingCulture>
+			</Set>
+		</Update>
+	</Eras>
+	<Technologies>
+		<Delete Type="TECH_ARCHITECTURE"/>
+		<Update>
+			<Where Type="TECH_THEOLOGY"/>
+			<Set>
+				<Cost>500</Cost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_CIVIL_SERVICE"/>
+			<Set>
+				<Cost>500</Cost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_GUILDS"/>
+			<Set>
+				<Cost>500</Cost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_METAL_CASTING"/>
+			<Set>
+				<Cost>500</Cost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_COMPASS"/>
+			<Set>
+				<EmbarkedAllWaterPassage>true</EmbarkedAllWaterPassage>
+				<EmbarkedMoveChange>1</EmbarkedMoveChange>
+				<Cost>1000</Cost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_EDUCATION"/>
+			<Set>
+				<Cost>1000</Cost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_CHIVALRY"/>
+			<Set>
+				<Cost>1000</Cost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_MACHINERY"/>
+			<Set>
+				<Cost>1000</Cost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_PHYSICS"/>
+			<Set>
+				<Cost>1000</Cost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_STEEL"/>
+			<Set>
+				<Cost>1000</Cost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_ASTRONOMY"/>
+			<Set>
+				<EmbarkedAllWaterPassage/>
+				<Cost>1500</Cost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_ACOUSTICS"/>
+			<Set>
+				<Cost>1500</Cost>
+				<IconAtlas>EXPANSION_SCEN_TECH_ATLAS</IconAtlas>
+				<PortraitIndex>2</PortraitIndex>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_PRINTING_PRESS"/>
+			<Set>
+				<GridY>5</GridY>
+				<Cost>1500</Cost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_ECONOMICS"/>
+			<Set>
+				<GridX>7</GridX>
+				<GridY>7</GridY>
+				<Cost>1500</Cost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_METALLURGY"/>
+			<Set>
+				<GridX>7</GridX>
+				<Cost>1500</Cost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_GUNPOWDER"/>
+			<Set>
+				<Cost>1500</Cost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_NAVIGATION"/>
+			<Set>
+				<Cost>2000</Cost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_BANKING"/>
+			<Set>
+				<Cost>2000</Cost>
+				<GridX>8</GridX>
+				<GridY>7</GridY>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_CHEMISTRY"/>
+			<Set>
+				<Cost>2000</Cost>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="TECH_ACOUSTICS"/>
+			<Set>
+				<Description>TXT_KEY_TECH_HUMANISM_TITLE</Description>
+				<Civilopedia>TXT_KEY_TECH_HUMANISM_DESC</Civilopedia>
+				<Help>TXT_KEY_TECH_HUMANISM_HELP</Help>
+				<Quote>TXT_KEY_TECH_HUMANISM_QUOTE</Quote>
+				<AudioIntro>AS2D_TECH_MED_HUMANISM</AudioIntro>
+				<AudioIntroHeader>AS2D_HEADING_TECH_MED_HUMANISM</AudioIntroHeader>
+			</Set>
+		</Update>
+		<Row>
+			<Type>TECH_EXPLORATION</Type>
+			<Cost>2000</Cost>
+			<Description>TXT_KEY_TECH_EXPLORATION_TITLE</Description>
+			<Civilopedia>TXT_KEY_TECH_EXPLORATION_DESC</Civilopedia>
+			<Help>TXT_KEY_TECH_EXPLORATION_HELP</Help>
+			<Era>ERA_RENAISSANCE</Era>
+			<Trade>true</Trade>
+			<GridX>8</GridX>
+			<GridY>0</GridY>
+			<Quote>TXT_KEY_TECH_EXPLORATION_QUOTE</Quote>
+			<PortraitIndex>3</PortraitIndex>
+			<IconAtlas>EXPANSION_SCEN_TECH_ATLAS</IconAtlas>
+			<AudioIntro>AS2D_TECH_MED_EXPLORATION</AudioIntro>
+			<AudioIntroHeader>AS2D_HEADING_TECH_MED_EXPLORATION</AudioIntroHeader>
+		</Row>
+	</Technologies>
+	<Technology_Flavors>
+		<Row>
+			<TechType>TECH_EXPLORATION</TechType>
+			<FlavorType>FLAVOR_SPACESHIP</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+	</Technology_Flavors>
+	<Technology_PrereqTechs>
+		<Delete TechType="TECH_BANKING"/>
+		<Delete TechType="TECH_PRINTING_PRESS"/>
+		<Delete TechType="TECH_ECONOMICS"/>
+		<Delete TechType="TECH_METALLURGY"/>
+		<Row>
+			<TechType>TECH_ACOUSTICS</TechType>
+			<PrereqTech>TECH_CHIVALRY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_PRINTING_PRESS</TechType>
+			<PrereqTech>TECH_CHIVALRY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_PRINTING_PRESS</TechType>
+			<PrereqTech>TECH_MACHINERY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_ECONOMICS</TechType>
+			<PrereqTech>TECH_MACHINERY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_METALLURGY</TechType>
+			<PrereqTech>TECH_MACHINERY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_METALLURGY</TechType>
+			<PrereqTech>TECH_PHYSICS</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_CHEMISTRY</TechType>
+			<PrereqTech>TECH_METALLURGY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_BANKING</TechType>
+			<PrereqTech>TECH_METALLURGY</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_BANKING</TechType>
+			<PrereqTech>TECH_ECONOMICS</PrereqTech>
+		</Row>
+		<Row>
+			<TechType>TECH_EXPLORATION</TechType>
+			<PrereqTech>TECH_ASTRONOMY</PrereqTech>
+		</Row>
+	</Technology_PrereqTechs>
+	<Units>
+		<Delete Type="UNIT_CHARIOT_ARCHER"/>
+		<Delete Type="UNIT_AMERICAN_MINUTEMAN"/>
+		<Delete Type="UNIT_PROPHET"/>
+		<Update>
+			<Where Type="UNIT_GALLEASS"/>
+			<Set>
+				<PrereqTech>TECH_ASTRONOMY</PrereqTech>
+				<Moves>6</Moves>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="UNIT_WORKBOAT"/>
+			<Set>
+				<Moves>8</Moves>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="UNIT_FRIGATE"/>
+			<Set>
+				<Moves>10</Moves>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="UNIT_GALLEASS"/>
+			<Set>
+				<Moves>6</Moves>
+				<ObsoleteTech>NULL</ObsoleteTech>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="UNIT_ENGLISH_SHIPOFTHELINE"/>
+			<Set>
+				<Moves>10</Moves>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="UNIT_CARAVEL"/>
+			<Set>
+				<PrereqTech>TECH_EXPLORATION</PrereqTech>
+				<Moves>8</Moves>
+				<Cost>400</Cost>
+				<HurryCostModifier>-1</HurryCostModifier>
+				<ObsoleteTech>NULL</ObsoleteTech>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="UNIT_TRIREME"/>
+			<Set>
+				<Moves>8</Moves>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="UNIT_GALLEY"/>
+			<Set>
+				<Moves>6</Moves>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="UNIT_BYZANTINE_DROMON"/>
+			<Set>
+				<Moves>8</Moves>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="UNIT_PRIVATEER"/>
+			<Set>
+				<Moves>10</Moves>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="UNIT_DUTCH_SEA_BEGGAR"/>
+			<Set>
+				<Moves>10</Moves>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="UNIT_GREAT_ADMIRAL"/>
+			<Set>
+				<Moves>8</Moves>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="UNIT_PIKEMAN"/>
+			<Set>
+				<ObsoleteTech>NULL</ObsoleteTech>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="UNIT_GERMAN_LANDSKNECHT"/>
+			<Set>
+				<ObsoleteTech>NULL</ObsoleteTech>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="UNIT_PIKEMAN"/>
+			<Set>
+				<ObsoleteTech>NULL</ObsoleteTech>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="UNIT_TREBUCHET"/>
+			<Set>
+				<ObsoleteTech>NULL</ObsoleteTech>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="UNIT_CELT_PICTISH_WARRIOR"/>
+			<Set>
+				<Combat>15</Combat>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="UNIT_RUSSIAN_COSSACK"/>
+			<Set>
+				<Combat>29</Combat>
+				<Cost>185</Cost>
+				<FaithCost>370</FaithCost>
+				<RequiresFaithPurchaseEnabled>1</RequiresFaithPurchaseEnabled>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="UNIT_AUSTRIAN_HUSSAR"/>
+			<Set>
+				<Combat>29</Combat>
+				<Cost>185</Cost>
+				<FaithCost>370</FaithCost>
+				<RequiresFaithPurchaseEnabled>1</RequiresFaithPurchaseEnabled>
+			</Set>
+		</Update>
+		<Row>
+			<Class>UNITCLASS_CROSSBOWMAN</Class>
+			<Type>UNIT_WELSH_LONGBOWMAN</Type>
+			<PrereqTech>TECH_MACHINERY</PrereqTech>
+			<Combat>10</Combat>
+			<RangedCombat>16</RangedCombat>
+			<Cost>120</Cost>
+			<FaithCost>240</FaithCost>
+			<RequiresFaithPurchaseEnabled>true</RequiresFaithPurchaseEnabled>
+			<Moves>2</Moves>
+			<Range>2</Range>
+			<CombatClass>UNITCOMBAT_ARCHER</CombatClass>
+			<Domain>DOMAIN_LAND</Domain>
+			<DefaultUnitAI>UNITAI_RANGED</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_WELSH_LONGBOWMAN</Description>
+			<Civilopedia>TXT_KEY_CIVILOPEDIA_UNITS_MEDIEVAL_LONGBOWMAN_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WELSH_LONGBOWMAN_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_HELP_WELSH_LONGBOWMAN</Help>
+			<MilitarySupport>true</MilitarySupport>
+			<MilitaryProduction>true</MilitaryProduction>
+			<Pillage>true</Pillage>
+			<AdvancedStartCost>20</AdvancedStartCost>
+			<XPValueAttack>3</XPValueAttack>
+			<XPValueDefense>3</XPValueDefense>
+			<UnitArtInfo>ART_DEF_UNIT_U_ENGLISH_LONGBOWMAN</UnitArtInfo>
+			<UnitFlagIconOffset>30</UnitFlagIconOffset>
+			<IconAtlas>UNIT_ATLAS_1</IconAtlas>
+			<PortraitIndex>31</PortraitIndex>
+		</Row>
+	</Units>
+	<Unit_ClassUpgrades>
+		<Delete UnitType="UNIT_CARAVEL"/>
+		<Delete UnitType="UNIT_TRIREME"/>
+		<Delete UnitType="UNIT_PIKEMAN"/>
+		<Delete UnitType="UNIT_GERMAN_LANDSKNECHT"/>
+		<Row>
+			<UnitType>UNIT_KNIGHT</UnitType>
+			<UnitClassType>UNITCLASS_LANCER</UnitClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_ARABIAN_CAMELARCHER</UnitType>
+			<UnitClassType>UNITCLASS_LANCER</UnitClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SONGHAI_MUSLIMCAVALRY</UnitType>
+			<UnitClassType>UNITCLASS_LANCER</UnitClassType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_MONGOLIAN_KESHIK</UnitType>
+			<UnitClassType>UNITCLASS_LANCER</UnitClassType>
+		</Row>
+	</Unit_ClassUpgrades>
+	<Unit_Flavors>
+		<Delete UnitType="UNIT_CARAVEL"/>
+		<Row>
+			<UnitType>UNIT_CARAVEL</UnitType>
+			<FlavorType>FLAVOR_SPACESHIP</FlavorType>
+			<Flavor>500</Flavor>
+		</Row>
+		<Delete UnitType="UNIT_SPANISH_CONQUISTADOR"/>
+		<Row>
+			<UnitType>UNIT_SPANISH_CONQUISTADOR</UnitType>
+			<FlavorType>FLAVOR_SPACESHIP</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SPANISH_CONQUISTADOR</UnitType>
+			<FlavorType>FLAVOR_OFFENSE</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SPANISH_CONQUISTADOR</UnitType>
+			<FlavorType>FLAVOR_MOBILE</FlavorType>
+			<Flavor>5</Flavor>
+		</Row>
+	</Unit_Flavors>
+	<Unit_FreePromotions>
+		<Row>
+			<UnitType>UNIT_WELSH_LONGBOWMAN</UnitType>
+			<PromotionType>PROMOTION_IGNORE_TERRAIN_COST</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WELSH_LONGBOWMAN</UnitType>
+			<PromotionType>PROMOTION_ONLY_DEFENSIVE</PromotionType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_WELSH_LONGBOWMAN</UnitType>
+			<PromotionType>PROMOTION_RANGE</PromotionType>
+		</Row>
+	</Unit_FreePromotions>
+	<Unit_ResourceQuantityRequirements>
+		<Delete UnitType="UNIT_SWORDSMAN"/>
+		<Delete UnitType="UNIT_MONGOLIAN_KESHIK"/>
+		<Row>
+			<UnitType>UNIT_CANNON</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_MUSKETMAN</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_FRENCH_MUSKETEER</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_OTTOMAN_JANISSARY</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+		</Row>
+		<Row>
+			<UnitType>UNIT_SPANISH_TERCIO</UnitType>
+			<ResourceType>RESOURCE_IRON</ResourceType>
+		</Row>
+	</Unit_ResourceQuantityRequirements>
+	<BuildingClasses>
+		<Delete Type="BUILDINGCLASS_ANGKOR_WAT"/>
+		<Delete Type="BUILDINGCLASS_CHICHEN_ITZA"/>
+		<Delete Type="BUILDINGCLASS_MOSQUE_OF_DJENNE"/>
+		<Delete Type="BUILDINGCLASS_HIMEJI_CASTLE"/>
+		<Delete Type="BUILDINGCLASS_MACHU_PICHU"/>
+		<Delete Type="BUILDINGCLASS_MAUSOLEUM_HALICARNASSUS"/>
+		<Delete Type="BUILDINGCLASS_GREAT_LIBRARY"/>
+		<Delete Type="BUILDINGCLASS_HANGING_GARDEN"/>
+		<Delete Type="BUILDINGCLASS_PORCELAIN_TOWER"/>
+		<Delete Type="BUILDINGCLASS_STATUE_ZEUS"/>
+		<Delete Type="BUILDINGCLASS_TAJ_MAHAL"/>
+		<Delete Type="BUILDINGCLASS_TEMPLE_ARTEMIS"/>
+		<Delete Type="BUILDINGCLASS_TERRACOTTA_ARMY"/>
+		<Delete Type="BUILDINGCLASS_COLOSSUS"/>
+		<Delete Type="BUILDINGCLASS_FORBIDDEN_PALACE"/>
+		<Delete Type="BUILDINGCLASS_GREAT_LIGHTHOUSE"/>
+		<Delete Type="BUILDINGCLASS_ORACLE"/>
+		<Delete Type="BUILDINGCLASS_GREAT_WALL"/>
+		<Delete Type="BUILDINGCLASS_BIG_BEN"/>
+		<Delete Type="BUILDINGCLASS_BRANDENBURG_GATE"/>
+		<Delete Type="BUILDINGCLASS_PETRA"/>
+	</BuildingClasses>
+	<Buildings>
+		<Delete Type="BUILDING_CEILIDH_HALL"/>
+		<Delete Type="BUILDING_MUD_PYRAMID_MOSQUE"/>
+		<Delete Type="BUILDING_ANGKOR_WAT"/>
+		<Delete Type="BUILDING_CHICHEN_ITZA"/>
+		<Delete Type="BUILDING_MOSQUE_OF_DJENNE"/>
+		<Delete Type="BUILDING_HIMEJI_CASTLE"/>
+		<Delete Type="BUILDING_MACHU_PICHU"/>
+		<Delete Type="BUILDING_MAUSOLEUM_HALICARNASSUS"/>
+		<Delete Type="BUILDING_GREAT_LIBRARY"/>
+		<Delete Type="BUILDING_HANGING_GARDEN"/>
+		<Delete Type="BUILDING_PORCELAIN_TOWER"/>
+		<Delete Type="BUILDING_STATUE_ZEUS"/>
+		<Delete Type="BUILDING_TAJ_MAHAL"/>
+		<Delete Type="BUILDING_TEMPLE_ARTEMIS"/>
+		<Delete Type="BUILDING_TERRACOTTA_ARMY"/>
+		<Delete Type="BUILDING_COLOSSUS"/>
+		<Delete Type="BUILDING_FORBIDDEN_PALACE"/>
+		<Delete Type="BUILDING_GREAT_LIGHTHOUSE"/>
+		<Delete Type="BUILDING_ORACLE"/>
+		<Delete Type="BUILDING_GREAT_WALL"/>
+		<Delete Type="BUILDING_BIG_BEN"/>
+		<Delete Type="BUILDING_BRANDENBURG_GATE"/>
+		<Delete Type="BUILDING_PETRA"/>
+		<Update>
+			<Where Type="BUILDING_HERMITAGE"/>
+			<Set>
+				<PrereqTech>TECH_ACOUSTICS</PrereqTech>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="BUILDING_GRANARY"/>
+			<Set>
+				<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="BUILDING_HAGIA_SOPHIA"/>
+			<Set>
+				<ExtraMissionarySpreads>1</ExtraMissionarySpreads>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="BUILDING_UNITED_NATIONS"/>
+			<Set>
+				<IconAtlas>EXPANSION_SCEN_WONDER_ATLAS</IconAtlas>
+				<PortraitIndex>6</PortraitIndex>
+			</Set>
+		</Update>
+		<Row>
+			<Type>BUILDING_STAVE_CHURCH</Type>
+			<BuildingClass>BUILDINGCLASS_TEMPLE</BuildingClass>
+			<Cost>50</Cost>
+			<GoldMaintenance>0</GoldMaintenance>
+			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
+			<Description>TXT_KEY_BUILDING_STAVE_CHURCH</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_STAVE_CHURCH_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_STAVE_CHURCH_STRATEGY</Strategy>
+			<ArtDefineTag>TEMPLE</ArtDefineTag>
+			<MinAreaSize>-1</MinAreaSize>
+			<HurryCostModifier>25</HurryCostModifier>
+			<IconAtlas>EXPANSION_SCEN_BUILDING_ATLAS</IconAtlas>
+			<NeverCapture>true</NeverCapture>
+			<PortraitIndex>0</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>BUILDING_CHATEAU</Type>
+			<BuildingClass>BUILDINGCLASS_CASTLE</BuildingClass>
+			<Cost>200</Cost>
+			<PrereqTech>TECH_CHIVALRY</PrereqTech>
+			<Help>TXT_KEY_BUILDING_CHATEAU_HELP</Help>
+			<Description>TXT_KEY_BUILDING_CHATEAU</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_CHATEAU_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CHATEAU_STRATEGY</Strategy>
+			<ArtDefineTag>CASTLE</ArtDefineTag>
+			<MinAreaSize>-1</MinAreaSize>
+			<AllowsRangeStrike>true</AllowsRangeStrike>
+			<Defense>700</Defense>
+			<ExtraCityHitPoints>25</ExtraCityHitPoints>
+			<HurryCostModifier>25</HurryCostModifier>
+			<IconAtlas>EXPANSION_SCEN_BUILDING_ATLAS</IconAtlas>
+			<ArtInfoCulturalVariation>true</ArtInfoCulturalVariation>
+			<DisplayPosition>1</DisplayPosition>
+			<NeverCapture>true</NeverCapture>
+			<PortraitIndex>1</PortraitIndex>
+		</Row>
+		<Row>
+			<Type>BUILDING_MADRASAH</Type>
+			<BuildingClass>BUILDINGCLASS_UNIVERSITY</BuildingClass>
+			<Cost>160</Cost>
+			<GoldMaintenance>2</GoldMaintenance>
+			<PrereqTech>TECH_EDUCATION</PrereqTech>
+			<Help>TXT_KEY_BUILDING_MADRASAH_HELP</Help>
+			<Description>TXT_KEY_BUILDING_MADRASAH</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDINGS_MADRASAH_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_MADRASAH_STRATEGY</Strategy>
+			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY</ArtDefineTag>
+			<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
+			<SpecialistCount>2</SpecialistCount>
+			<MinAreaSize>-1</MinAreaSize>
+			<ConquestProb>66</ConquestProb>
+			<HurryCostModifier>15</HurryCostModifier>
+			<IconAtlas>EXPANSION_SCEN_BUILDING_ATLAS</IconAtlas>
+			<PortraitIndex>2</PortraitIndex>
+		</Row>
+	</Buildings>
+	<Building_ClassesNeededInCity>
+		<Row>
+			<BuildingType>BUILDING_STAVE_CHURCH</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CHATEAU</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_WALLS</BuildingClassType>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MADRASAH</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_LIBRARY</BuildingClassType>
+		</Row>
+	</Building_ClassesNeededInCity>
+	<Building_Flavors>
+		<Update>
+			<Where BuildingType="BUILDING_HAGIA_SOPHIA" FlavorType="FLAVOR_GREAT_PEOPLE"/>
+			<Set>
+				<Flavor>1</Flavor>
+			</Set>
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_HAGIA_SOPHIA" FlavorType="FLAVOR_RELIGION"/>
+			<Set>
+				<Flavor>25</Flavor>
+			</Set>
+		</Update>
+		<Row>
+			<BuildingType>BUILDING_STAVE_CHURCH</BuildingType>
+			<FlavorType>FLAVOR_RELIGION</FlavorType>
+			<Flavor>60</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CHATEAU</BuildingType>
+			<FlavorType>FLAVOR_CITY_DEFENSE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CHATEAU</BuildingType>
+			<FlavorType>FLAVOR_CULTURE</FlavorType>
+			<Flavor>25</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MADRASAH</BuildingType>
+			<FlavorType>FLAVOR_SCIENCE</FlavorType>
+			<Flavor>35</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MADRASAH</BuildingType>
+			<FlavorType>FLAVOR_RELIGION</FlavorType>
+			<Flavor>35</Flavor>
+		</Row>
+	</Building_Flavors>
+	<Building_FeatureYieldChanges>
+		<Row>
+			<BuildingType>BUILDING_MADRASAH</BuildingType>
+			<FeatureType>FEATURE_JUNGLE</FeatureType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Building_FeatureYieldChanges>
+	<Building_FreeUnits>
+		<Delete BuildingType="BUILDING_HAGIA_SOPHIA"/>
+	</Building_FreeUnits>
+	<Building_YieldChanges>
+		<Row>
+			<BuildingType>BUILDING_STAVE_CHURCH</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>2</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_CHATEAU</BuildingType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>3</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_MADRASAH</BuildingType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Building_YieldChanges>
+	<Building_YieldModifiers>
+		<Row>
+			<BuildingType>BUILDING_MADRASAH</BuildingType>
+			<YieldType>YIELD_SCIENCE</YieldType>
+			<Yield>33</Yield>
+		</Row>
+	</Building_YieldModifiers>
+	<Religions>
+		<Delete Type="RELIGION_BUDDHISM"/>
+		<Delete Type="RELIGION_CONFUCIANISM"/>
+		<Delete Type="RELIGION_HINDUISM"/>
+		<Delete Type="RELIGION_JUDAISM"/>
+		<Delete Type="RELIGION_SHINTO"/>
+		<Delete Type="RELIGION_SIKHISM"/>
+		<Delete Type="RELIGION_TAOISM"/>
+		<Delete Type="RELIGION_TENGRIISM"/>
+		<Delete Type="RELIGION_ZOROASTRIANISM"/>
+		<Row>
+			<Type>RELIGION_ORTHODOXY</Type>
+			<Description>TXT_KEY_RELIGION_ORTHODOXY</Description>
+			<Civilopedia>TXT_KEY_RELIGION_ORTHODOXY_PEDIA</Civilopedia>
+			<IconAtlas>RELIGION_ATLAS_WHITE</IconAtlas>
+			<PortraitIndex>12</PortraitIndex>
+			<IconString>[ICON_RELIGION_ORTHODOX]</IconString>
+		</Row>
+		<Row>
+			<Type>RELIGION_PROTESTANTISM</Type>
+			<Description>TXT_KEY_RELIGION_PROTESTANTISM</Description>
+			<Civilopedia>TXT_KEY_RELIGION_PROTESTANTISM_PEDIA</Civilopedia>
+			<IconAtlas>RELIGION_ATLAS_WHITE</IconAtlas>
+			<PortraitIndex>13</PortraitIndex>
+			<IconString>[ICON_RELIGION_PROTESTANT]</IconString>
+		</Row>
+	</Religions>
+	<Beliefs>
+		<Delete Type="BELIEF_GODDESS_HUNT"/>
+		<Delete Type="BELIEF_FERTILITY_RITES"/>
+		<Delete Type="BELIEF_GOD_CRAFTSMEN"/>
+		<Delete Type="BELIEF_GOD_SEA"/>
+		<Delete Type="BELIEF_MESSENGER_GODS"/>
+		<Delete Type="BELIEF_ONE_WITH_NATURE"/>
+		<Delete Type="BELIEF_FEED_WORLD"/>
+		<Delete Type="BELIEF_FORMAL_LITURGY"/>
+		<Delete Type="BELIEF_STONE_CIRCLES"/>
+		<Delete Type="BELIEF_GOD_WAR"/>
+		<Delete Type="BELIEF_SWORD_PLOWSHARES"/>
+		<Delete Type="BELIEF_SACRED_WATERS"/>
+		<Delete Type="BELIEF_GODDESS_LOVE"/>
+		<Delete Type="BELIEF_RELIGIOUS_SETTLEMENTS"/>
+		<Delete Type="BELIEF_GOD_FESTIVALS"/>
+		<Delete Type="BELIEF_ORAL_TRADITION"/>
+		<Delete Type="BELIEF_ANCESTOR_WORSHIP"/>
+		<Delete Type="BELIEF_DESERT_FOLKLORE"/>
+		<Delete Type="BELIEF_SACRED_PATH"/>
+		<Delete Type="BELIEF_GODDESS_STRATEGY"/>
+		<Delete Type="BELIEF_FAITH_HEALERS"/>
+		<Delete Type="BELIEF_MONUMENT_GODS"/>
+		<Delete Type="BELIEF_RELIQUARY"/>
+		<Delete Type="BELIEF_PEACE_LOVING"/>
+		<Delete Type="BELIEF_CEREMONIAL_BURIAL"/>
+		<Delete Type="BELIEF_INITIATION_RITES"/>
+		<Delete Type="BELIEF_DEFENDER_FAITH"/>
+		<Delete Type="BELIEF_RELIGIOUS_UNITY"/>
+		<Delete Type="BELIEF_PAGODAS"/>
+		<Delete Type="BELIEF_PEACE_GARDENS"/>
+		<Delete Type="BELIEF_RELIGIOUS_ART"/>
+		<Delete Type="BELIEF_LITURGICAL_DRAMA"/>
+		<Delete Type="BELIEF_ASCETISM"/>
+		<Delete Type="BELIEF_RELIGIOUS_CENTER"/>
+		<Delete Type="BELIEF_OPEN_SKY"/>
+		<Delete Type="BELIEF_JUST_WAR"/>
+		<Delete Type="BELIEF_RELIGIOUS_COMMUNITY"/>
+		<Delete Type="BELIEF_PILGRIMAGE"/>
+		<Delete Type="BELIEF_WORLD_CHURCH"/>
+		<Delete Type="BELIEF_DIVINE_INSPIRATION"/>
+		<Delete Type="BELIEF_DANCE_AURORA"/>
+		<Delete Type="BELIEF_GURUSHIP"/>
+		<Delete Type="BELIEF_INTERFAITH_DIALOGUE"/>
+		<Update>
+			<Where Type="BELIEF_MESSIAH"/>
+			<Set>
+				<ProphetStrengthModifier>0</ProphetStrengthModifier>
+				<ProphetCostModifier>0</ProphetCostModifier>
+			</Set>
+		</Update>
+		<Update>
+			<Where Type="BELIEF_RELIGIOUS_TEXTS"/>
+			<Set>
+				<SpreadStrengthModifier>400</SpreadStrengthModifier>
+			</Set>
+		</Update>
+		<Row>
+			<Type>BELIEF_INDULGENCES</Type>
+			<Description>TXT_KEY_BELIEF_INDULGENCES</Description>
+			<ShortDescription>TXT_KEY_BELIEF_INDULGENCES_SHORT</ShortDescription>
+			<Follower>true</Follower>
+		</Row>
+		<Row>
+			<Type>BELIEF_THIRD_ROME</Type>
+			<Description>TXT_KEY_BELIEF_THIRD_ROME</Description>
+			<ShortDescription>TXT_KEY_BELIEF_THIRD_ROME_SHORT</ShortDescription>
+			<Founder>true</Founder>
+		</Row>
+		<Row>
+			<Type>BELIEF_ICONOGRAPHY</Type>
+			<Description>TXT_KEY_BELIEF_ICONOGRAPHY</Description>
+			<ShortDescription>TXT_KEY_BELIEF_ICONOGRAPHY_SHORT</ShortDescription>
+			<Follower>true</Follower>
+		</Row>
+		<Row>
+			<Type>BELIEF_HAJJ</Type>
+			<Description>TXT_KEY_BELIEF_HAJJ</Description>
+			<ShortDescription>TXT_KEY_BELIEF_HAJJ_SHORT</ShortDescription>
+			<Founder>true</Founder>
+		</Row>
+		<Row>
+			<Type>BELIEF_SALAT</Type>
+			<Description>TXT_KEY_BELIEF_SALAT</Description>
+			<ShortDescription>TXT_KEY_BELIEF_SALAT_SHORT</ShortDescription>
+			<Follower>true</Follower>
+			<MinPopulation>1</MinPopulation>
+		</Row>
+		<Row>
+			<Type>BELIEF_WORK_ETHIC</Type>
+			<Description>TXT_KEY_BELIEF_WORK_ETHIC</Description>
+			<ShortDescription>TXT_KEY_BELIEF_WORK_ETHIC_SHORT</ShortDescription>
+			<Follower>true</Follower>
+			<MinPopulation>1</MinPopulation>
+		</Row>
+		<Row>
+			<Type>BELIEF_CLERICAL_MARRIAGE</Type>
+			<Description>TXT_KEY_BELIEF_CLERICAL_MARRIAGE</Description>
+			<ShortDescription>TXT_KEY_BELIEF_CLERICAL_MARRIAGE_SHORT</ShortDescription>
+			<Follower>true</Follower>
+		</Row>
+	</Beliefs>
+	<Belief_YieldChangeTradeRoute>
+		<Row>
+			<BeliefType>BELIEF_INDULGENCES</BeliefType>
+			<YieldType>YIELD_GOLD</YieldType>
+			<Yield>2</Yield>
+		</Row>
+	</Belief_YieldChangeTradeRoute>
+	<Belief_BuildingClassYieldChanges>
+		<Update>
+			<Where Type="BELIEF_CHORAL_MUSIC"/>
+			<Set>
+				<YieldChange>4</YieldChange>
+			</Set>
+		</Update>
+		<Row>
+			<BeliefType>BELIEF_ICONOGRAPHY</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_TEMPLE</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>1</YieldChange>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_ICONOGRAPHY</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_TEMPLE</BuildingClassType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_SALAT</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_SALAT</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_TEMPLE</BuildingClassType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<YieldChange>2</YieldChange>
+		</Row>
+	</Belief_BuildingClassYieldChanges>
+	<Belief_BuildingClassHappiness>
+		<Row>
+			<BeliefType>BELIEF_CLERICAL_MARRIAGE</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_TEMPLE</BuildingClassType>
+			<Happiness>3</Happiness>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_CLERICAL_MARRIAGE</BeliefType>
+			<BuildingClassType>BUILDINGCLASS_SHRINE</BuildingClassType>
+			<Happiness>3</Happiness>
+		</Row>
+	</Belief_BuildingClassHappiness>
+	<Belief_CityYieldChanges>
+		<Row>
+			<BeliefType>BELIEF_WORK_ETHIC</BeliefType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>8</Yield>
+		</Row>
+	</Belief_CityYieldChanges>
+	<Belief_HolyCityYieldChanges>
+		<Row>
+			<BeliefType>BELIEF_HAJJ</BeliefType>
+			<YieldType>YIELD_CULTURE</YieldType>
+			<Yield>5</Yield>
+		</Row>
+		<Row>
+			<BeliefType>BELIEF_HAJJ</BeliefType>
+			<YieldType>YIELD_FAITH</YieldType>
+			<Yield>5</Yield>
+		</Row>
+	</Belief_HolyCityYieldChanges>
+	<AIEconomicStrategies>
+		<Update>
+			<Where Type="ECONOMICAISTRATEGY_DEVELOPING_RELIGION"/>
+			<Set>
+				<TechObsolete>NULL</TechObsolete>
+			</Set>
+		</Update>
+	</AIEconomicStrategies>
+	<DeleteMissingReferences table="Technologies" column="Type"/>
+	<DeleteMissingReferences table="UnitClasses" column="Type"/>
+	<DeleteMissingReferences table="Units" column="Type"/>
+	<DeleteMissingReferences table="BuildingClasses" column="Type"/>
+	<DeleteMissingReferences table="Buildings" column="Type"/>
+	<DeleteMissingReferences table="Beliefs" column="Type"/>
+	<DeleteMissingReferences table="AIMilitaryStrategies" column="Type"/>
+</GameData>
