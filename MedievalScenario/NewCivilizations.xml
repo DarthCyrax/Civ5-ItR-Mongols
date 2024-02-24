@@ -125,6 +125,7 @@
 			<Where Type="CIVILIZATION_MONGOL"/>
 			<Set>
 				<ID>12</ID>
+				<DawnOfManQuote>TXT_KEY_MEDIEVAL_SCENARIO_CIV5_DAWN_TEXT</DawnOfManQuote>
 			</Set>
 		</Update>
 	</Civilizations>

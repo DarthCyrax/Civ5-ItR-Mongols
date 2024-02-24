@@ -142,10 +142,11 @@ function GetPlayerReligionForScenario(ePlayer)
 	
 	local civType = pPlayer:GetCivilizationType();
 	if (civType == GameInfo.Civilizations["CIVILIZATION_BYZANTIUM"].ID or
-	    civType == GameInfo.Civilizations["CIVILIZATION_RUSSIA"].ID) then
+		civType == GameInfo.Civilizations["CIVILIZATION_RUSSIA"].ID) then
 		iMyCivsReligion = 12;
 	elseif (civType == GameInfo.Civilizations["CIVILIZATION_SONGHAI"].ID or
 	    	civType == GameInfo.Civilizations["CIVILIZATION_OTTOMAN"].ID or
+			civType == GameInfo.Civilizations["CIVILIZATION_MONGOL"].ID or
 	    	civType == GameInfo.Civilizations["CIVILIZATION_ARABIA"].ID) then
 		iMyCivsReligion = 5;
 	elseif (civType == GameInfo.Civilizations["CIVILIZATION_FRANCE"].ID or

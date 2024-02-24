@@ -20,6 +20,7 @@ ScenarioCivilizations = {
 	[9] = "CIVILIZATION_ENGLAND",
 	[10] = "CIVILIZATION_FRANCE",
 	[11] = "CIVILIZATION_AUSTRIA",
+	[12] = "CIVILIZATION_MONGOL",
 }
 
 ----------------------------------------------------------------
@@ -51,6 +52,7 @@ end);
 -- Handle Start Button
 Controls.StartButton:RegisterCallback(Mouse.eLClick, function()
 	
+	local playerIndex2
 	-- Shared settings
 	PreGame.Reset(); -- just in case.
 	PreGame.SetEra(2);   -- Medieval
@@ -81,6 +83,8 @@ Controls.StartButton:RegisterCallback(Mouse.eLClick, function()
 		if(playerIndex ~= nil) then
 			UI.MoveScenarioPlayerToSlot( playerIndex, 0 );
 		end
+		
+		playerIndex2 = playerIndex;
 	else
 		PreGame.SetLoadWBScenario(false);
 	
@@ -110,12 +114,22 @@ Controls.StartButton:RegisterCallback(Mouse.eLClick, function()
 		local randomMap = Modding.GetEvaluatedFilePath(MOD_ID, myModVersion, "Europe_Scenario.lua");
 		PreGame.SetMapScript(randomMap.EvaluatedPath);
 		PreGame.SetMaxTurns(200);
+		
+		playerIndex2 = playerIndex;
 	end
 		
-    PreGame.SetSlotStatus(12, SlotStatus.SS_COMPUTER);
-	PreGame.SetCivilization(12, GameInfo.Civilizations["CIVILIZATION_MONGOL"].ID);
-	PreGame.SetPlayerColor(12, GameInfo.PlayerColors["PLAYERCOLOR_MONGOL"].ID);
-	PreGame.SetLeaderType(12, GameInfo.Leaders["LEADER_GENGHIS_KHAN"].ID);
+	-- Only run if the player did not choose to play mongols
+	if(GameInfo.Civilizations[ScenarioCivilizations[playerIndex2]].ID ~= GameInfo.Civilizations["CIVILIZATION_MONGOL"].ID) then
+		PreGame.SetSlotStatus(12, SlotStatus.SS_COMPUTER);
+		PreGame.SetCivilization(12, GameInfo.Civilizations["CIVILIZATION_MONGOL"].ID);
+		PreGame.SetPlayerColor(12, GameInfo.PlayerColors["PLAYERCOLOR_MONGOL"].ID);
+		PreGame.SetLeaderType(12, GameInfo.Leaders["LEADER_GENGHIS_KHAN"].ID);
+	else
+		PreGame.SetSlotStatus(12, SlotStatus.SS_COMPUTER);
+		PreGame.SetCivilization(12, GameInfo.Civilizations["CIVILIZATION_SPAIN"].ID);
+		PreGame.SetPlayerColor(12, GameInfo.PlayerColors["PLAYERCOLOR_SPAIN"].ID);
+		PreGame.SetLeaderType(12, GameInfo.Leaders["LEADER_ISABELLA"].ID);
+	end
 
 	PreGame.SetGameOption("GAMEOPTION_NO_TUTORIAL", true);
 	

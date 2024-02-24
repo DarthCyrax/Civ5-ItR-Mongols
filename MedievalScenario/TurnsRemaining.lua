@@ -144,6 +144,7 @@ Events.SerialEventExitCityScreen.Add( OnExitCityScreen );
 ---------------------------------------------------------------------
 GameEvents.PlayerDoTurn.Add(function(iPlayer) 
 	local iReformationTurn = GetPersistentProperty("ReformationStart");
+	local iMongolRelInit = GetPersistentProperty("MongolRelInit");
 	local iTurn = Game.GetGameTurn();
 	
 	-- Only on first player's turn
@@ -169,12 +170,24 @@ GameEvents.PlayerDoTurn.Add(function(iPlayer)
 	
 	ScoreHolyCities();
 	
-	if (iTurn == 1) then
+	if (iTurn == 40) then
 		BringInMongols();
 	elseif (iTurn == 50 or iTurn == 60 or iTurn == 70 or iTurn == 85 or iTurn == 110) then
 		ReinforceMongols();
 	elseif (iTurn == 150) then
 		MongolsPullOut();
+	end
+	
+	local pHuman = Players[0];
+	local pPlayer = GetMongolPlayer();
+	
+	-- Establish religion as islam
+	if (pHuman:GetCivilizationType() == pPlayer:GetCivilizationType() and iMongolRelInit == nil) then
+		capital = pPlayer:GetCapitalCity();
+		if (capital ~= nil) then
+			capital:AdoptReligionFully(GameInfoTypes["RELIGION_ISLAM"]);
+		end
+		SetPersistentProperty("MongolRelInit", 1);
 	end
 
 	return false;
@@ -202,7 +215,7 @@ GameEvents.CityCaptureComplete.Add(function(iOldOwner, bIsCapital, iX, iY, iNewO
 			
 	if (cCity == pOrthodoxHolyCity) then
 		if (civType == GameInfo.Civilizations["CIVILIZATION_BYZANTIUM"].ID or
-		    civType == GameInfo.Civilizations["CIVILIZATION_RUSSIA"].ID) then
+			civType == GameInfo.Civilizations["CIVILIZATION_RUSSIA"].ID) then
 			Game.SetFounder(GameInfoTypes["RELIGION_ORTHODOXY"], iNewOwner);
 		else
 			local pNewHolyCity = FindNextOrthodoxHolyCity();
@@ -220,6 +233,7 @@ GameEvents.CityCaptureComplete.Add(function(iOldOwner, bIsCapital, iX, iY, iNewO
 	elseif (cCity == pIslamHolyCity) then
 		if (civType == GameInfo.Civilizations["CIVILIZATION_SONGHAI"].ID or
 			civType == GameInfo.Civilizations["CIVILIZATION_OTTOMAN"].ID or
+			civType == GameInfo.Civilizations["CIVILIZATION_MONGOL"].ID or
 			civType == GameInfo.Civilizations["CIVILIZATION_ARABIA"].ID) then
 			Game.SetFounder(GameInfoTypes["RELIGION_ISLAM"], iNewOwner);
 		else
@@ -473,7 +487,7 @@ end)
 -------------------------------------------------
 -- GetFounderBenefitsReligion
 -------------------------------------------------
-function OnGetFounderBenefitsReligion(ePlayer)
+GameEvents.GetFounderBenefitsReligion.Add(function(ePlayer)
 
     local bGetsCredit = false;
 	local pPlayer = Players[ePlayer];
@@ -521,7 +535,7 @@ function OnGetFounderBenefitsReligion(ePlayer)
 	else	
 	    return -1;
 	end
-end
+end);
 ---------------------------------------------------------
 GameEvents.GetReligionToSpread.Add(function(ePlayer)
 	return MyCurrentReligion(ePlayer);
@@ -536,12 +550,13 @@ function MyCurrentReligion(ePlayer)
 	
 	local civType = pPlayer:GetCivilizationType();
 	if (civType == GameInfo.Civilizations["CIVILIZATION_BYZANTIUM"].ID or
-	    civType == GameInfo.Civilizations["CIVILIZATION_RUSSIA"].ID) then
+		civType == GameInfo.Civilizations["CIVILIZATION_RUSSIA"].ID) then
 
 		iMyCivsReligion = 12;
 
 	elseif (civType == GameInfo.Civilizations["CIVILIZATION_SONGHAI"].ID or
 	    	civType == GameInfo.Civilizations["CIVILIZATION_OTTOMAN"].ID or
+			civType == GameInfo.Civilizations["CIVILIZATION_MONGOL"].ID or
 	    	civType == GameInfo.Civilizations["CIVILIZATION_ARABIA"].ID) then
 
 		iMyCivsReligion = 5;
@@ -857,7 +872,7 @@ function SetupReligions()
 	Game.FoundReligion(iMeccaPlayer, eReligion, nil, eBelief2, eBelief3, -1, -1, pMeccaCity);
 	Game.EnhanceReligion(iMeccaPlayer, eReligion, eBelief4, eBelief5);
 
-	for iPlayer = 0, 11, 1 do
+	for iPlayer = 0, 12, 1 do
 		local pPlayer = Players[iPlayer];
 		if (pPlayer:IsAlive()) then
 			local civType = pPlayer:GetCivilizationType();
@@ -881,7 +896,7 @@ function SetupReligions()
 	end
 	
 	-- Second pass to establish followers
-	for iPlayer = 0, 11, 1 do
+	for iPlayer = 0, 12, 1 do
 		local pPlayer = Players[iPlayer];
 		if (pPlayer:IsAlive()) then
 			local civType = pPlayer:GetCivilizationType();
@@ -974,7 +989,7 @@ function SetupReligions()
 	local vaticanTeamID = Players[iVaticanPlayer]:GetTeam();
 	local meccaTeamID = Players[iMeccaPlayer]:GetTeam();
 	local jerusalemTeamID = Players[iJerusalemPlayer]:GetTeam();
-	for iPlayer = 0, 11, 1 do
+	for iPlayer = 0, 12, 1 do
 		local pPlayer = Players[iPlayer];
 		if (pPlayer:IsAlive()) then
 			local civType = pPlayer:GetCivilizationType();
@@ -1051,11 +1066,18 @@ end
 function AddInitialUnits(iPlayer)
 	
 	local pPlayer = Players[iPlayer];
+	local pMongols = GetMongolPlayer();
+	-- Gotta make exceptions for Mongols!
+	if (pPlayer:GetCivilizationType() == pMongols:GetCivilizationType()) then
+		-- Mongol Player is not allowed to have units or cities at the start!
+		-- The game will force spawn some anyways. But they will be deleted later.
+		return;
+	end
+	
 	if (pPlayer:IsAlive()) then
 		local capital = pPlayer:GetCapitalCity();
 		
 		print ("AddInitialUnits, iPlayer: ", iPlayer);
-	
 		-- Historical map
 		if (capital ~= nil) then
 		
@@ -1189,6 +1211,7 @@ function ScoreHolyCities()
 
 			elseif (civType == GameInfo.Civilizations["CIVILIZATION_SONGHAI"].ID or
 			    	civType == GameInfo.Civilizations["CIVILIZATION_OTTOMAN"].ID or
+					civType == GameInfo.Civilizations["CIVILIZATION_MONGOL"].ID or
 			    	civType == GameInfo.Civilizations["CIVILIZATION_ARABIA"].ID) then
 
 				if (Game.GetFounder(GameInfoTypes["RELIGION_ISLAM"], -1) == iPlayerLoop) then
@@ -1232,15 +1255,28 @@ function ScoreHolyCities()
 end
 
 ---------------------------------------------------------------------
+function GetMongolPlayer()
+	local pPlayer = Players[0];
+	if (pPlayer:GetCivilizationType() == GameInfoTypes["CIVILIZATION_MONGOL"]) then
+		-- If the player isn't the mongols, they are automatically the 12th (13th) slot.
+		return pPlayer;
+	else
+		local pMongols = Players[12];
+		return pMongols;
+	end
+end
+
+---------------------------------------------------------------------
 function BringInMongols()
 
 		FindMongolStartPlot();
 		
 		local iX = GetPersistentProperty("MongolStartX");
 		local iY = GetPersistentProperty("MongolStartY");
-		
+		local pHuman = Players[0];
+		local pPlayer = GetMongolPlayer();
 		local start_plot = Map.GetPlot(iX, iY);
-		local pPlayer = Players[12];
+
 		pTeam = Teams[pPlayer:GetTeam()];
 		pPlayer:SetStartingPlot(start_plot);
 
@@ -1267,6 +1303,36 @@ function BringInMongols()
 		
 		local iTechIndex = GameInfoTypes["TECH_CHIVALRY"];
 		pTeam:SetHasTech(iTechIndex, true);
+		
+		-- Give human mongols the correct starting amounts
+		local iHandicap = Game:GetHandicapType();
+		if (pHuman:GetCivilizationType() == pPlayer:GetCivilizationType()) then
+			if (iHandicap <= 2) then
+				pPlayer:SetJONSCulture(125);
+				pPlayer:SetFaith(125);
+				pPlayer:SetGold(250);
+			elseif (iHandicap == 3) then
+				pPlayer:SetJONSCulture(125);
+				pPlayer:SetFaith(100);
+				pPlayer:SetGold(200);
+			elseif (iHandicap == 4) then
+				pPlayer:SetJONSCulture(125);
+				pPlayer:SetFaith(75);
+				pPlayer:SetGold(150);
+			elseif (iHandicap == 5) then
+				pPlayer:SetJONSCulture(125);
+				pPlayer:SetFaith(50);
+				pPlayer:SetGold(100);
+			elseif (iHandicap == 6) then
+				pPlayer:SetJONSCulture(125);
+				pPlayer:SetFaith(25);
+				pPlayer:SetGold(50);
+			elseif (iHandicap == 7) then
+				pPlayer:SetJONSCulture(125);
+				pPlayer:SetFaith(15);
+				pPlayer:SetGold(30);
+			end
+		end
 		
 		iUnitID = GameInfoTypes["UNIT_SETTLER"];
 		unit = pPlayer:InitUnit (iUnitID, capital:GetX(), capital:GetY(), UNITAI_SETTLE, DirectionTypes.DIRECTION_WEST);
@@ -1335,6 +1401,15 @@ function BringInMongols()
 		iUnitID = GameInfoTypes["UNIT_CATAPULT"];
 		unit = pPlayer:InitUnit (iUnitID, capital:GetX(), capital:GetY(), UNITAI_RANGED, DirectionTypes.DIRECTION_WEST);
 		unit:JumpToNearestValidPlot();
+		
+		-- Establish religion as islam
+		if (pHuman:GetCivilizationType() == pPlayer:GetCivilizationType()) then
+			capital = pPlayer:GetCapitalCity();
+			if (capital ~= nil) then
+				capital:AdoptReligionFully(GameInfoTypes["RELIGION_ISLAM"]);
+				SetPersistentProperty("MongolRelInit", 1);
+			end
+		end
 end
 
 ---------------------------------------------------------------------
@@ -1423,7 +1498,8 @@ end
 ---------------------------------------------------------------------
 function ReinforceMongols()
 
-		local pPlayer = Players[12];
+		-- local pPlayer = Players[12];
+		local pPlayer = GetMongolPlayer();
 		local capital = pPlayer:GetCapitalCity();
 		
 		iUnitID = GameInfoTypes["UNIT_SWORDSMAN"];
@@ -1608,8 +1684,12 @@ function AddUnitsPerDifficulty(iPlayer)
 	local unit;
 	local pPlayer = Players[iPlayer];
 	local capital = pPlayer:GetCapitalCity();
+	local pMongols = GetMongolPlayer();
 	
 	if (not pPlayer:IsAlive()) then
+		return;
+	elseif (pPlayer:GetCivilizationType() == pMongols:GetCivilizationType()) then
+		-- Mongol Player is not allowed to have units or cities at the start!
 		return;
 	end
 	
@@ -1849,7 +1929,7 @@ if (iValue == nil) then
 
 	Map.ChangeAIMapHint(4);
 
-	for iPlayer = 0, 11, 1 do
+	for iPlayer = 0, 12, 1 do
 		AddInitialUnits(iPlayer);
 		AddUnitsPerDifficulty(iPlayer);
 	end
@@ -1858,12 +1938,24 @@ if (iValue == nil) then
 		InitializeCityState(iPlayer);
 	end
 
-	-- Remove Mongol units		
-	local pPlayer = Players[12];
+	--Remove Mongol units
+	local pPlayer = GetMongolPlayer();
 	for pUnit in pPlayer:Units() do
 		pUnit:Kill();
 	end
-
+	
+	local pHuman = Players[0];
+	local pMongols = GetMongolPlayer();
+	if (pHuman:GetCivilizationType() == pMongols:GetCivilizationType()) then
+		-- If the player picked the mongols, give them soemthing to do for 40 turns at least. Two scouts seems right
+		local mongolX = 78;
+		local mongolY = 53;
+		iUnitID = GameInfoTypes["UNIT_SCOUT"];
+		unit = pHuman:InitUnit (iUnitID, mongolX, mongolY, UNITAI_EXPLORE, DirectionTypes.DIRECTION_WEST);
+		unit:JumpToNearestValidPlot();
+		unit = pHuman:InitUnit (iUnitID, mongolX, mongolY, UNITAI_EXPLORE, DirectionTypes.DIRECTION_WEST);
+		unit:JumpToNearestValidPlot();
+	end
 
 	SetupReligions();
 	
@@ -1877,7 +1969,5 @@ if (iValue == nil) then
 
 	Game.SetUnitedNationsCountdown(50);
 	
-	GameEvents.GetFounderBenefitsReligion.Add(OnGetFounderBenefitsReligion);	
-	
-	BringInMongols();
+	-- GameEvents.GetFounderBenefitsReligion.Add(OnGetFounderBenefitsReligion);	
 end
