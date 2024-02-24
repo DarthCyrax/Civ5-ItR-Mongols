@@ -507,6 +507,12 @@
 				<RequiresFaithPurchaseEnabled>1</RequiresFaithPurchaseEnabled>
 			</Set>
 		</Update>
+		<Update>
+			<Where Type="UNIT_HORSEMAN"/>
+			<Set>
+				<ObsoleteTech>TECH_METALLURGY</ObsoleteTech>
+			</Set>
+		</Update>
 		<Row>
 			<Class>UNITCLASS_CROSSBOWMAN</Class>
 			<Type>UNIT_WELSH_LONGBOWMAN</Type>
